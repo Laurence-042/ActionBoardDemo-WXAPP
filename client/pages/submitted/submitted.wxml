@@ -1,0 +1,32 @@
+<!--pages/contribute/contribute.wxml-->
+<view class="main_wrap">
+  <scroll-view class="activity_panel" scroll-y="true">
+    <view wx:if="{{has_activity}}">
+      <view wx:for="{{activities}}" wx:for-item="activity" wx:key="start_time" class="action">
+        <navigator>
+          <view class="title">
+            <text>{{activity.title}}_By[{{activity.author_nickname}}]</text>
+          </view>
+          <view class="content">
+            <text>活动开始时间: {{activity.start_time}}\n</text>
+            <text>预计持续时间: {{activity.duration}}\n</text>
+            <text>活动地点: {{activity.location}}\n</text>
+            <text>预计参加人数: {{activity.current_people_num}} / {{activity.max_people_num}}\n</text>
+            <view wx:if="{{activity.participant}}">
+              <text>参加者: {{activity.participant}}\n</text>
+            </view>
+          </view>
+          <view>
+            <button id="{{activity.id}}" bindtap="delete_activity">取消此活动</button>
+          </view>
+        </navigator>
+      </view>
+    </view>
+    <view wx:else>
+      <view class="title">
+        <text>你还没有发布过活动,要发布一个吗?</text>
+      </view>
+    </view>
+  </scroll-view>
+  <!--<view class="refresh-view" bindtap='refresh'>refresh</view>-->
+</view>

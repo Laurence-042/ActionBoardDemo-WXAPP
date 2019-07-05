@@ -1,0 +1,12 @@
+/* pages/editor/editor.wxss */
+.main_wrap {
+  height: 100vh;
+  background-color: #2b2b2b;
+  display: flex;
+  flex-direction: column;
+}
+
+input{
+  color: #e0e0e0;
+  background: #6c6c6c;
+}

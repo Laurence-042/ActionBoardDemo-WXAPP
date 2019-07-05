@@ -1,0 +1,9 @@
+<!--pages/login.wxml-->
+<view class="main_wrap">
+  <view class="title">
+    <text decode="{{true}}">&nbsp;&nbsp;您好,我们需要获取您的用户信息完成您在此小程序内的注册和登录.\n&nbsp;&nbsp;请放心,我们只会从中获取您的微信昵称(作为小程序内的昵称)和openid作为您在小程序内的唯一标识(相当于您在小程序内的用户名).\n</text>
+  </view>
+  <view>
+    <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">同意获取用户信息</button>
+  </view>
+</view>

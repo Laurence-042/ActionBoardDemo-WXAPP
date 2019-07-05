@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/main/main",
+    "pages/my/my",
+    "pages/editor/editor",
+    "pages/login/login",
+    "pages/logs/logs",
+    "pages/submitted/submitted"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#3f3f3f",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "勇者协会HIT分部任务板",
+    "backgroundColor": "#2b2b2b",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "backgroundColor": "#2b2b2b",
+    "color": "#f9f9f9",
+    "list": [
+      {
+        "pagePath": "pages/main/main",
+        "text": "活动列表"
+      },
+      {
+        "pagePath": "pages/editor/editor",
+        "text": "提交活动"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "已关注"
+      },
+      {
+        "pagePath": "pages/submitted/submitted",
+        "text": "您发起的活动"
+      }
+    ]
+  }
+}

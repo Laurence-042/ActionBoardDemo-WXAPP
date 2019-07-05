@@ -1,0 +1,32 @@
+<!--pages/main/main.wxml-->
+<view class="main_wrap">
+  <view wx:for="{{activities}}" wx:for-item="activity" wx:key="start_time" class="action">
+    <view class="title">
+      <text>{{activity.title}}_By[{{activity.author_nickname}}]</text>
+    </view>
+    <view class="content">
+      <text>活动开始时间: {{activity.start_time}}\n</text>
+      <text>预计持续时间: {{activity.duration}}\n</text>
+      <text>活动地点: {{activity.location}}\n</text>
+      <text>预计参加人数: {{activity.current_people_num}} / {{activity.max_people_num}}\n</text>
+      <view wx:if="{{activity.participant}}">
+        <text>参加者: {{activity.participant}}\n</text>
+      </view>
+    </view>
+    <view class='activity_options_view'>
+      <view wx:if="{{activity.liked}}">
+        <button>已关注</button>
+      </view>
+      <view wx:else>
+        <button id="{{activity.id}}" bindtap="keep_an_eye_on">关注(想去)</button>
+      </view>
+      <view wx:if="{{activity.joined}}">
+        <button>已参加</button>
+      </view>
+      <view wx:else>
+        <button id="{{activity.id}}" bindtap="join">参加(要去)</button>
+      </view>
+    </view>
+  </view>
+  <!--<view class="refresh-view" bindtap='refresh'>refresh</view>-->
+</view>

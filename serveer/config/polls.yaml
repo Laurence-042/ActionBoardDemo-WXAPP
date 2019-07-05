@@ -1,0 +1,11 @@
+# polls.yaml
+postgres:
+  host: 127.0.0.1
+  port: 3306
+  database: wxapp
+  user: wxapp-user
+  password: wxapp-user
+  charset: utf8
+wxapp:
+  appid: \[some appid\]
+  secret: \[some secret\]

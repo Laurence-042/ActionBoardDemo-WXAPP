@@ -1,0 +1,40 @@
+<!--pages/editor/editor.wxml-->
+<view class="main_wrap">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="section">
+      <view class="section__title">
+        <text>标题</text>
+      </view>
+      <input name="title" confirm-type='next' placeholder="代号:无名" />
+    </view>
+    <view class="section">
+      <view class="section__title">
+        <text>活动开始时间</text>
+      </view>
+      <input name="start_time" confirm-type='next' placeholder="{{date}}" />
+    </view>
+    <view class="section">
+      <view class="section__title">
+        <text>预计持续时间</text>
+      </view>
+      <input name="duration" confirm-type='next' placeholder="1小时" />
+    </view>
+    <view class="section">
+      <view class="section__title">
+        <text>活动地点</text>
+      </view>
+      <input name="location" confirm-type='next' placeholder="人类存在之地" />
+    </view>
+    <view class="section">
+      <view class="section__title">
+        <text>参加人数上限</text>
+      </view>
+      <input name="max_people_num" confirm-type='done' type='number' placeholder="6" />
+    </view>
+
+    <view class="btn-area">
+      <button formType="submit">Submit</button>
+      <button formType="reset">Reset</button>
+    </view>
+  </form>
+</view>
